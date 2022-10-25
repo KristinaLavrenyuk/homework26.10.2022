@@ -1,0 +1,25 @@
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int n, i = 1;
+    cin >> n;
+    int a0 = 0;
+    int a1 = 1;
+    int a2;
+
+    do
+    {
+        a2 = a0 + a1;
+        a0 = a1;
+        a1 = a2;
+        i++;
+    } while (n > a2);
+
+    if (n == a2)
+        cout << "1" << endl << i;
+    else
+        cout << "0";
+}
