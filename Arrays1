@@ -1,0 +1,26 @@
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int n[10]{};
+    float summa = 0, CA, min = 0, max = 0;
+    int i = 0;
+    cout << "Input 10 numbers: " << endl;
+
+    while (i < 10)
+    {
+        cin >> n[i];
+        if (max < n[i]) max = n[i];
+        if (i == 0) min = n[0];
+        if (min > n[i]) min = n[i];
+
+        summa += n[i];
+        i++;
+    }
+    CA = summa / i;
+    cout << "CA: " << CA << endl << "Min: " << min << endl << "Max: " << max << endl;
+
+    system("pause");
+}
