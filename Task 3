@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int n, a2 = 0;
+    cin >> n;
+    int n0 = 0;
+    int n1 = 1;
+
+    for (int i = 0; i < n - 1; i++)
+    {
+        a2 = n0 + n1;
+        n0 = n1;
+        n1 = a2;
+    }
+    if (n == 1)
+        cout << n1;
+    else
+        cout << a2 << endl;
+    system("pause");
+}
